@@ -5,7 +5,7 @@
 Discover **Minecraft Trivia** and More!
 
 > [!NOTE]
-> 中文用户请移步[此处](https://github.com/awaEric233/MKSS/blob/main/README_ZH.md)
+> 中文用户请移步[此处](https://github.com/awaEric233/MKSS/blob/main/README_ZH.md)！
 
 ## Getting Started
 
