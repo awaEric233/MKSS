@@ -2,7 +2,7 @@
 
 `Minecraft Knowledge Sharing Site` is a homepage of **Plain Craft Launcher 2**.
 
-**Minecraft Trivias** and more fun things!
+Discover **Minecraft Trivia** and More!
 
 > [!NOTE]
 > 中文用户请移步[此处](https://github.com/awaEric233/MKSS/blob/main/README_ZH.md)
@@ -31,6 +31,6 @@ Please use [this form](https://forms.office.com/r/sL2vTGsBcU).
 ## File Structure
 
 - [index.php](https://github.com/awaEric233/MKSS/blob/main/index.php): Builder of MKSS.
-- [cfg_trivia.json](https://services.awaeric.xyz/mkss/cfg_trivia.json): JSON file of game trivias.
+- [cfg_trivia.json](https://services.awaeric.xyz/mkss/cfg_trivia.json): JSON file of game trivia.
 - [cfg_issues.json](https://services.awaeric.xyz/mkss/cfg_issues.json): JSON file of game issues.
 - [cfg_wayback.json](https://services.awaeric.xyz/mkss/cfg_wayback.json): JSON file of old version features.
