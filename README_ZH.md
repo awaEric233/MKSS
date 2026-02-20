@@ -1,11 +1,11 @@
 # MKSS
 
-`Minecraft Knowledge Sharing Site` 是一个 **Plain Craft Launcher 2** 的自定义主页。
+`Minecraft 芝士站` 是一个 **Plain Craft Launcher 2** 的自定义主页。
 
 **Minecraft 冷知识**和其他好玩的东西都在这里啦！
 
 > [!NOTE]
-> English users? Please come [here](https://github.com/awaEric233/MKSS)
+> English users? Please come [here](https://github.com/awaEric233/MKSS)!
 
 ## 快速开始
 
