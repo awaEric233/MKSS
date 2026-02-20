@@ -1,5 +1,5 @@
 <!--
-    Plain Craft Launcher 2 - Minecraft 芝士站主页 ( Minecraft Knowledge Share Site Homepage, MKSS )
+    Plain Craft Launcher 2 - Minecraft 芝士站主页 ( Minecraft Knowledge Sharing Site Homepage, MKSS )
     (C) 2026 awa_Eric233. All rights reserved.
 -->
 
