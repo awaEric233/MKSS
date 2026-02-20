@@ -23,7 +23,7 @@
 > **请不要使用除表单以外的任何方式投稿！**<br/>
 > 这会加剧审核者的负担。<br/>
 
-## File Structure
+## 文件结构
 
 - [index.php](https://github.com/awaEric233/MKSS/blob/main/index.php): MKSS 构建器。
 - [cfg_trivia.json](https://services.awaeric.xyz/mkss/cfg_trivia.json): 游戏冷知识的 JSON。
