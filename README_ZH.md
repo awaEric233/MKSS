@@ -13,7 +13,7 @@
 2. 点击顶栏上的 “设置”。
 3. 点击侧栏上的 “个性化”。
 4. 点击 “主页” 卡片里的 “联网更新”。
-5. 将我们的 URL `https://services.awaeric.xyz/mkss` 输入到文本框中。
+5. 将我们的 URL `https://www.xxag.top/mkss` 输入到文本框中。
 
 ## 投稿想法
 
@@ -26,6 +26,6 @@
 ## 文件结构
 
 - [index.php](https://github.com/awaEric233/MKSS/blob/main/index.php): MKSS 构建器。
-- [cfg_trivia.json](https://services.awaeric.xyz/mkss/cfg_trivia.json): 游戏冷知识的 JSON。
-- [cfg_issues.json](https://services.awaeric.xyz/mkss/cfg_issues.json): 特性收藏夹的 JSON。
-- [cfg_wayback.json](https://services.awaeric.xyz/mkss/cfg_wayback.json): 旧版本时光机的 JSON。
+- [cfg_trivia.json](https://www.xxag.top/mkss/cfg_trivia.json): 游戏冷知识的 JSON。
+- [cfg_issues.json](https://www.xxag.top/mkss/cfg_issues.json): 特性收藏夹的 JSON。
+- [cfg_wayback.json](https://www.xxag.top/mkss/cfg_wayback.json): 旧版本时光机的 JSON。
