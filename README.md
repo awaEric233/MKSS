@@ -34,3 +34,4 @@ Please use [this form](https://forms.office.com/r/sL2vTGsBcU).
 - [cfg_trivia.json](https://www.xxag.top/mkss/cfg_trivia.json): JSON file of game trivia.
 - [cfg_issues.json](https://www.xxag.top/mkss/cfg_issues.json): JSON file of game issues.
 - [cfg_wayback.json](https://www.xxag.top/mkss/cfg_wayback.json): JSON file of old version features.
+- [cfg_official.json](https://www.xxag.top/mkss/cfg_official.json): JSON file of Mojang's articles.

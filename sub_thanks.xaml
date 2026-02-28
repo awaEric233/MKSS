@@ -1,0 +1,30 @@
+<!--
+    Plain Craft Launcher 2 - Minecraft 芝士站主页 ( Minecraft Knowledge Share Site Homepage, MKSS )
+    (C) 2026 awa_Eric233. All rights reserved.
+-->
+
+<local:MyCard Margin="0,0,0,15">
+    <Border Padding="12" Background="{DynamicResource ColorBrush4}" CornerRadius="3" BorderThickness="3,0,0,0" BorderBrush="{DynamicResource ColorBrush3}">
+        <StackPanel Orientation="Horizontal">
+            <Path VerticalAlignment="Center" Stretch="Uniform" Height="15" Width="15" Margin="0,0,10,0" Fill="White" Data="M956.629333 370.048c-49.408-98.816-148.224-222.293333-255.146666-280.362667a35.584 35.584 0 0 0-34.133334 0L102.997333 395.946667A74.112 74.112 0 0 0 42.666667 468.864v395.221333c0 40.96 33.194667 74.112 74.112 74.112h790.442666c40.96 0 74.112-33.194667 74.112-74.112v-395.221333a307.285333 307.285333 0 0 0-24.704-98.816z m-271.701333-205.013333a435.754667 435.754667 0 0 1 193.152 229.717333H260.522667l424.405333-229.717333z m123.477333 303.786666a91.392 91.392 0 0 1-98.773333 98.858667c-61.269333 0-123.52-37.546667-123.52-98.816h222.293333z m98.816 395.264H116.778667v-391.253333l7.68-3.968H512c0 101.973333 95.36 172.885333 197.632 172.885333 148.181333 0 172.885333-172.885333 172.885333-172.885333 8.234667-0.512 16.469333-0.512 24.746667 0v395.221333z M339.072 542.976a123.52 123.52 0 1 0 0 247.04 123.52 123.52 0 0 0 0-247.04z m0 172.885333a49.408 49.408 0 1 1 0-98.816 49.408 49.408 0 0 1 0 98.816zM623.146667 295.936a37.034667 37.034667 0 1 0 74.112 0 37.034667 37.034667 0 0 0-74.112 0z"/>
+            <TextBlock Foreground="White" TextWrapping="Wrap" Text="感谢您支持 Minecraft 芝士站" FontWeight="Bold"/>
+        </StackPanel>
+    </Border>
+</local:MyCard>
+
+<local:MyCard Title="特别感谢" Margin="0,0,0,15" IsSwapped="False">
+    <StackPanel Margin="25,40,23,15">
+        <local:MyListItem Title="Minecraft Wiki" Info="部分文章使我能够了解某些版本的特性。"/>
+        <local:MyListItem Title="最亮的信标" Info="开源新闻主页，使我能够从主页中参考部分样式。"/>
+        <local:MyListItem Title="MKSS 贡献者们" Info="为主页添砖加瓦，完善内容。"/>
+    </StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="赞助者" Margin="0,0,0,15" IsSwapped="False">
+    <StackPanel Margin="25,40,23,15">
+        <!-- 没做完，先别看（ -->
+        <!-- 以下信息均来自爱发电 API。受限于帮助文件无法实时更新，该页面每五分钟更新一次。 -->
+        <TextBlock Text="感谢各位对 MKSS 的支持！" Margin="0,0,0,10"/>
+        <local:MyButton Text="赞助作者" Padding="30,10" ColorType="Highlight" HorizontalAlignment="Left" EventType="打开网页" EventData="https://afdian.com/a/transae"/>
+    </StackPanel>
+</local:MyCard>

@@ -29,3 +29,4 @@
 - [cfg_trivia.json](https://www.xxag.top/mkss/cfg_trivia.json): 游戏冷知识的 JSON。
 - [cfg_issues.json](https://www.xxag.top/mkss/cfg_issues.json): 特性收藏夹的 JSON。
 - [cfg_wayback.json](https://www.xxag.top/mkss/cfg_wayback.json): 旧版本时光机的 JSON。
+- [cfg_official.json](https://www.xxag.top/mkss/cfg_official.json): Mojang 有话说的 JSON。
