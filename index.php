@@ -10,7 +10,7 @@ function get_json($path, $logo)
     $data = json_decode($json, true);
     foreach ($data as $item)
     {
-        echo '<local:MyListItem Logo="pack://application:,,,/images/Blocks/'.$logo.'.png" Title="'.$item['Title'].'" Info="贡献者：'.$item['Author'].'" Type="Clickable" EventType="弹出窗口" EventData="'.$item['Title'].'|'.$item['Content'].'"/>';
+        echo '<local:MyListItem Logo="pack://application:,,,/images/Blocks/'.$logo.'.png" Title="'.$item['Title'].'" Info="贡献者：'.$item['Author'].'" Type="Clickable" EventType="弹出窗口" EventData="'.$item['Title'].'|'.$item['Content'].'|关闭"/>';
     }
 }
 ?>
