@@ -31,7 +31,15 @@ Please use [this form](https://forms.office.com/r/sL2vTGsBcU).
 ## File Structure
 
 - [index.php](https://github.com/awaEric233/MKSS/blob/main/index.php): Builder of MKSS.
-- [cfg_trivia.json](https://www.xxag.top/mkss/cfg_trivia.json): JSON file of game trivia.
-- [cfg_issues.json](https://www.xxag.top/mkss/cfg_issues.json): JSON file of game issues.
-- [cfg_wayback.json](https://www.xxag.top/mkss/cfg_wayback.json): JSON file of old version features.
-- [cfg_official.json](https://www.xxag.top/mkss/cfg_official.json): JSON file of Mojang's articles.
+- [/configs](https://www.xxag.top/mkss/configs): Configuration file index.
+
+## Get information online
+
+- Get configuration file index: `GET https://www.xxag.top/mkss/configs`
+- Get configuration file: `GET https://www.xxag.top/mkss/configs/<config_name>`
+
+## Contributors
+
+Thanks to all contributors for supporting MKSS!
+
+![Contributors](https://contrib.rocks/image?repo=awaEric233/MKSS)

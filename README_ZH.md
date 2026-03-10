@@ -26,7 +26,15 @@
 ## 文件结构
 
 - [index.php](https://github.com/awaEric233/MKSS/blob/main/index.php): MKSS 构建器。
-- [cfg_trivia.json](https://www.xxag.top/mkss/cfg_trivia.json): 游戏冷知识的 JSON。
-- [cfg_issues.json](https://www.xxag.top/mkss/cfg_issues.json): 特性收藏夹的 JSON。
-- [cfg_wayback.json](https://www.xxag.top/mkss/cfg_wayback.json): 旧版本时光机的 JSON。
-- [cfg_official.json](https://www.xxag.top/mkss/cfg_official.json): Mojang 有话说的 JSON。
+- [/configs](https://www.xxag.top/mkss/configs): 配置文件索引。
+
+## 联网获取信息
+
+- 获取配置文件索引：`GET https://www.xxag.top/mkss/configs`
+- 获取配置文件：`GET https://www.xxag.top/mkss/configs/<config_name>`
+
+## 贡献者
+
+感谢各位贡献者对 MKSS 的支持！
+
+![贡献者们](https://contrib.rocks/image?repo=awaEric233/MKSS)

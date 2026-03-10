@@ -4,14 +4,33 @@
 -->
 
 <?php
+function get_files()
+{
+    $files = new ArrayObject();
+    foreach (scandir('./configs/') as $item) {
+        if (str_starts_with($item, 'cfg_'))
+        {
+            $item = './configs/'.$item;
+            $data = json_decode(file_get_contents($item), true);
+            $files->append(array($data['Name'], $item, $data['Logo']));
+        }
+    }
+    return $files;
+}
 function get_json($path, $logo)
 {
+    $result = '';
     $json = file_get_contents($path);
-    $data = json_decode($json, true);
+    $data = json_decode($json, true)['Data'];
+    $tags = file_get_contents('tags.json');
+    $tags_data = json_decode($tags, true);
     foreach ($data as $item)
     {
-        echo '<local:MyListItem Logo="pack://application:,,,/images/Blocks/'.$logo.'.png" Title="'.$item['Title'].'" Info="贡献者：'.$item['Author'].'" Type="Clickable" EventType="弹出窗口" EventData="'.$item['Title'].'|'.$item['Content'].'|关闭"/>';
+        $cur_tag = '';
+        if (array_key_exists($item['Author'], $tags_data)) $cur_tag = '&lt;'.$tags_data[$item['Author']].'&gt; ';
+        $result = $result.'<local:MyListItem Logo="pack://application:,,,/images/Blocks/'.$logo.'.png" Title="'.$item['Title'].'" Info="贡献者：'.$cur_tag.$item['Author'].'" Type="Clickable" EventType="弹出窗口" EventData="'.$item['Title'].'|'.$item['Content'].'|关闭"/>';
     }
+    return $result;
 }
 ?>
 
@@ -24,37 +43,17 @@ function get_json($path, $logo)
     </Border>
 </local:MyCard>
 
-<local:MyCard Title="Powder Snow - 游戏冷知识" Margin="0,0,0,15" CanSwap="True" IsSwapped="False">
+<?php
+foreach (get_files() as $item) {
+    echo '<local:MyCard Title="'.$item[0].'" Margin="0,0,0,15" CanSwap="True" IsSwapped="False">
     <StackPanel Margin="25,40,23,15">
-        <?php
-            get_json('cfg_trivia.json','Grass');
-        ?>
+        '
+        .get_json($item[1],$item[2]).
+        '
     </StackPanel>
-</local:MyCard>
-    
-<local:MyCard Title="Firefly Bush - 特性收藏夹" Margin="0,0,0,15" CanSwap="True" IsSwapped="False">
-    <StackPanel Margin="25,40,23,15">
-        <?php
-            get_json('cfg_issues.json','GrassPath');
-        ?>
-    </StackPanel>
-</local:MyCard>
-
-<local:MyCard Title="Candle - 旧版本时光机" Margin="0,0,0,15" CanSwap="True" IsSwapped="False">
-    <StackPanel Margin="25,40,23,15">
-        <?php
-            get_json('cfg_wayback.json','Cobblestone');
-        ?>
-    </StackPanel>
-</local:MyCard>
-
-<local:MyCard Title="Lectern - Mojang 有话说" Margin="0,0,0,15" CanSwap="True" IsSwapped="False">
-    <StackPanel Margin="25,40,23,15">
-        <?php
-            get_json('cfg_official.json','GoldBlock');
-        ?>
-    </StackPanel>
-</local:MyCard>
+</local:MyCard>';
+}
+?>
 
 <local:MyCard Title="Book and Quill - 芝士新闻" Margin="0,0,0,15" CanSwap="False" IsSwapped="False">
     <StackPanel Margin="25,40,23,15">
