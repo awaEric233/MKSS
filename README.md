@@ -35,7 +35,7 @@ Please use [this form](https://forms.office.com/r/sL2vTGsBcU).
 - [/misc/tags.json](https://www.xxag.top/mkss/misc/tags.json): Tags.
 - [/misc/notice.json](https://www.xxag.top/mkss/misc/notice.json): Notice.
 
-## Get information online
+## Get Information Online
 
 - Get configuration file index: `GET https://www.xxag.top/mkss/configs`
 - Get configuration file: `GET https://www.xxag.top/mkss/configs/<config_name>`
