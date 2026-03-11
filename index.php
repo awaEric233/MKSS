@@ -57,8 +57,14 @@ foreach (get_files() as $item) {
 
 <local:MyCard Title="Book and Quill - 芝士新闻" Margin="0,0,0,15" CanSwap="False" IsSwapped="False">
     <StackPanel Margin="25,40,23,15">
-        <local:MyListItem Logo="pack://application:,,,/images/Blocks/CommandBlock.png" Title="芝士站需要你的帮助！" Info="来为本主页贡献你找到的冷知识吧！" Type="Clickable" EventType="打开网页" EventData="https://forms.office.com/r/sL2vTGsBcU"/>
-        <local:MyListItem Logo="pack://application:,,,/images/Blocks/CommandBlock.png" Title="芝士站已登陆 PCL2 预设主页！" Info="点击这里可以查看主页审核的 Discussion，来接收一些维护信息。" Type="Clickable" EventType="打开网页" EventData="https://github.com/Meloong-Git/PCL/discussions/7750"/>
+        <?php
+        $json = file_get_contents('./misc/notice.json');
+        $data = json_decode($json, true);
+        foreach ($data as $item)
+        {
+            echo '<local:MyListItem Logo="pack://application:,,,/images/Blocks/CommandBlock.png" Title="'.$item['Title'].'" Info="'.$item['Info'].'" Type="Clickable" EventType="打开网页" EventData="'.$item['Link'].'"/>';
+        }
+        ?>
     </StackPanel>
 </local:MyCard>
 
