@@ -22,7 +22,7 @@ function get_json($path, $logo)
     $result = '';
     $json = file_get_contents($path);
     $data = json_decode($json, true)['Data'];
-    $tags = file_get_contents('tags.json');
+    $tags = file_get_contents('./misc/tags.json');
     $tags_data = json_decode($tags, true);
     foreach ($data as $item)
     {

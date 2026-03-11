@@ -27,11 +27,13 @@
 
 - [index.php](https://github.com/awaEric233/MKSS/blob/main/index.php): MKSS 构建器。
 - [/configs](https://www.xxag.top/mkss/configs): 配置文件索引。
+- [/misc/tags.json](https://www.xxag.top/mkss/misc/tags.json): 标签。
 
 ## 联网获取信息
 
 - 获取配置文件索引：`GET https://www.xxag.top/mkss/configs`
 - 获取配置文件：`GET https://www.xxag.top/mkss/configs/<config_name>`
+- 获取标签：`GET https://www.xxag.top/mkss/misc/tags.json`
 
 ## 贡献者
 

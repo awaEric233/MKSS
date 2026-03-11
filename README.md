@@ -32,11 +32,13 @@ Please use [this form](https://forms.office.com/r/sL2vTGsBcU).
 
 - [index.php](https://github.com/awaEric233/MKSS/blob/main/index.php): Builder of MKSS.
 - [/configs](https://www.xxag.top/mkss/configs): Configuration file index.
+- [/misc/tags.json](https://www.xxag.top/mkss/misc/tags.json): Tags.
 
 ## Get information online
 
 - Get configuration file index: `GET https://www.xxag.top/mkss/configs`
 - Get configuration file: `GET https://www.xxag.top/mkss/configs/<config_name>`
+- Get tags: `GET https://www.xxag.top/mkss/misc/tags.json`
 
 ## Contributors
 
