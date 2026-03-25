@@ -24,8 +24,9 @@
 <local:MyCard Title="赞助者" Margin="0,0,0,15" IsSwapped="False">
     <StackPanel Margin="25,40,23,15">
         <!-- 没做完，先别看（ -->
+        <!-- 哈批爱发电又换域名（恼 -->
         <!-- 以下信息均来自爱发电 API。受限于帮助文件无法实时更新，该页面每五分钟更新一次。 -->
         <TextBlock Text="感谢各位对 MKSS 的支持！" Margin="0,0,0,10"/>
-        <local:MyButton Text="赞助作者" Padding="30,10" ColorType="Highlight" HorizontalAlignment="Left" EventType="打开网页" EventData="https://afdian.com/a/transae"/>
+        <local:MyButton Text="赞助作者" Padding="30,10" ColorType="Highlight" HorizontalAlignment="Left" EventType="打开网页" EventData="https://ifdian.net/a/transae"/>
     </StackPanel>
 </local:MyCard>
