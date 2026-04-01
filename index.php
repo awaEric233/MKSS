@@ -44,8 +44,42 @@ function get_json($path, $logo)
 </local:MyCard>
 
 <?php
+$is_debug_idx = false;
+$is_rick = date('m-d') === '04-01';
+if (isset($_GET['debug'])) {
+    switch ($_GET['debug']) {
+        case '0':
+            $is_debug_idx = true;
+            break;
+        case '41':
+            $is_rick = true;
+            break;
+        default:
+            echo '<local:MyCard Margin="0,0,0,15" Title="调试模式">
+    <StackPanel Margin="25,40,23,15">
+        <local:MyListItem Title="0：索引调试" Info="显示所有卡片对应的配置文件。"/>
+        <local:MyListItem Title="41：索引调试" Info="显示 RickRoll 提示条。"/>
+    </StackPanel>
+</local:MyCard>';
+    }
+}
+if ($is_rick) {
+    echo '<local:MyHint Text="{variable:MkssRick:近期主页服务可能会受到影响，点击此提示条查看更多信息。}" Margin="0,0,0,15">
+    <local:CustomEventService.Events>
+        <local:CustomEventCollection>
+            <local:CustomEvent Type="打开网页" Data="https://cdn.mtdv.me/video/rick.mp4"/>
+            <local:CustomEvent Type="修改变量" Data="MkssRick|看来你已经被 RickRoll 过了。重音 Teto 生日快乐！|-"/>
+            <local:CustomEvent Type="刷新页面" Data="-"/>
+        </local:CustomEventCollection>
+    </local:CustomEventService.Events>
+</local:MyHint>';
+}
 foreach (get_files() as $item) {
-    echo '<local:MyCard Title="'.$item[0].'" Margin="0,0,0,15" CanSwap="True" IsSwapped="False">
+    $idx = "";
+    if ($is_debug_idx) {
+        $idx = " - ".$item[1];
+    }
+    echo '<local:MyCard Title="'.$item[0].$idx.'" Margin="0,0,0,15" CanSwap="True" IsSwapped="False">
     <StackPanel Margin="25,40,23,15">
         '
         .get_json($item[1],$item[2]).
