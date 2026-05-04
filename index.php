@@ -114,10 +114,12 @@ foreach (get_files() as $item) {
 <local:MyCard Title="Book and Quill - 芝士新闻" Margin="0,0,0,15" CanSwap="False" IsSwapped="False">
     <StackPanel Margin="25,40,23,15">
         <?php
+        // 获取公告
         $json = file_get_contents('./misc/notice.json');
         $data = json_decode($json, true);
         foreach ($data as $item)
         {
+            // 输出公告
             echo '<local:MyListItem Logo="pack://application:,,,/images/Blocks/CommandBlock.png" Title="'.$item['Title'].'" Info="'.$item['Info'].'" Type="Clickable" EventType="打开网页" EventData="'.$item['Link'].'"/>';
         }
         ?>
