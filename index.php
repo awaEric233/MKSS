@@ -4,10 +4,20 @@
 -->
 
 <?php
+$ua = $_SERVER['HTTP_USER_AGENT'];
+// UA 不是 PCL2 的直接踹飞
+if (!str_starts_with($ua,"PCL2/")) {
+    http_response_code(403);
+    echo '<b>Minecraft 芝士站主页（MKSS）</b> - 请使用 PCL2 访问主页！';
+    return;    
+}
+
+// 获取配置文件
 function get_files()
 {
     $files = new ArrayObject();
     foreach (scandir('./configs/') as $item) {
+        // 判断是否为配置文件
         if (str_starts_with($item, 'cfg_'))
         {
             $item = './configs/'.$item;
@@ -17,6 +27,8 @@ function get_files()
     }
     return $files;
 }
+
+// 获取 JSON 对应的内容
 function get_json($path, $logo)
 {
     $result = '';
@@ -26,6 +38,7 @@ function get_json($path, $logo)
     $tags_data = json_decode($tags, true);
     foreach ($data as $item)
     {
+        // 构建卡片
         $cur_tag = '';
         if (array_key_exists($item['Author'], $tags_data)) $cur_tag = '&lt;'.$tags_data[$item['Author']].'&gt; ';
         $result = $result.'<local:MyListItem Logo="pack://application:,,,/images/Blocks/'.$logo.'.png" Title="'.$item['Title'].'" Info="贡献者：'.$cur_tag.$item['Author'].'" Type="Clickable" EventType="弹出窗口" EventData="'.$item['Title'].'|'.$item['Content'].'|关闭"/>';
@@ -44,12 +57,18 @@ function get_json($path, $logo)
 </local:MyCard>
 
 <?php
+// 调试
 $is_debug_idx = false;
 $is_rick = date('m-d') === '04-01';
 if (isset($_GET['debug'])) {
     switch ($_GET['debug']) {
         case '0':
             $is_debug_idx = true;
+            break;
+        case '1':
+            echo '<local:MyCard Margin="0,0,0,15" Title="调试模式 - UA 调试">
+    <TextBlock Margin="25,40,23,15" Text="'.$ua.'"/>
+</local:MyCard>';
             break;
         case '41':
             $is_rick = true;
@@ -58,11 +77,13 @@ if (isset($_GET['debug'])) {
             echo '<local:MyCard Margin="0,0,0,15" Title="调试模式">
     <StackPanel Margin="25,40,23,15">
         <local:MyListItem Title="0：索引调试" Info="显示所有卡片对应的配置文件。"/>
-        <local:MyListItem Title="41：索引调试" Info="显示 RickRoll 提示条。"/>
+        <local:MyListItem Title="1：UA 调试" Info="显示当前的 User-Agent。"/>
+        <local:MyListItem Title="41：愚人节调试" Info="显示 RickRoll 提示条。"/>
     </StackPanel>
 </local:MyCard>';
     }
 }
+// RickRoll 提示条
 if ($is_rick) {
     echo '<local:MyHint Text="{variable:MkssRick:近期主页服务可能会受到影响，点击此提示条查看更多信息。}" Margin="0,0,0,15">
     <local:CustomEventService.Events>
@@ -74,6 +95,7 @@ if ($is_rick) {
     </local:CustomEventService.Events>
 </local:MyHint>';
 }
+// 输出卡片
 foreach (get_files() as $item) {
     $idx = "";
     if ($is_debug_idx) {
