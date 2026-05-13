@@ -17,7 +17,7 @@
 
 ## 投稿想法
 
-请使用[此表单](https://forms.office.com/r/sL2vTGsBcU).
+请使用[此表单](https://forms.office.com/r/sL2vTGsBcU)。
 
 > [!IMPORTANT]
 > **请不要使用除表单以外的任何方式投稿！**<br/>
