@@ -20,7 +20,6 @@ function get_files()
     return $files;
 }
 
-
 // 根据 MD5 输出版本号
 $str = file_get_contents("upd.txt");
 
