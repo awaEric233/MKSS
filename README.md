@@ -17,7 +17,7 @@ Discover **Minecraft Trivia** and More!
 
 ## Post your ideas
 
-Please use [this form](https://forms.office.com/r/sL2vTGsBcU).
+Please use the link in the information card.
 
 > [!IMPORTANT]
 > **Please do not submit your work through any means other than the form!**<br/>
