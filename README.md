@@ -7,7 +7,7 @@ Discover **Minecraft Trivia** and More!
 > [!NOTE]
 > 中文用户请移步[此处](https://github.com/awaEric233/MKSS/blob/main/README_ZH.md)！
 
-## Getting Started
+## Getting started
 
 1. Open your **Plain Craft Launcher 2**.
 2. Click "设置" on the top bar.
@@ -15,7 +15,7 @@ Discover **Minecraft Trivia** and More!
 4. Click "联网更新" in the "主页" card.
 5. Type our URL: `https://www.xxag.top/mkss` into the text box.
 
-## Post Your Ideas
+## Post your ideas
 
 Please use [this form](https://forms.office.com/r/sL2vTGsBcU).
 
@@ -28,14 +28,14 @@ Please use [this form](https://forms.office.com/r/sL2vTGsBcU).
 > Cannot Understand Chinese?<br/>
 > You may try Google Translate.<br/>
 
-## File Structure
+## File structure
 
 - [index.php](https://github.com/awaEric233/MKSS/blob/main/index.php): Builder of MKSS.
 - [/configs](https://www.xxag.top/mkss/configs): Configuration file index.
 - [/misc/tags.json](https://www.xxag.top/mkss/misc/tags.json): Tags.
 - [/misc/notice.json](https://www.xxag.top/mkss/misc/notice.json): Notice.
 
-## Get Information Online
+## Get information online
 
 - Get configuration file index: `GET https://www.xxag.top/mkss/configs`
 - Get configuration file: `GET https://www.xxag.top/mkss/configs/<config_name>`

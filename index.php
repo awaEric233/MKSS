@@ -143,7 +143,7 @@ foreach (get_files() as $item)
                 <Bold>PCL2</Bold>
                 <Run>Minecraft 芝士站主页</Run>
             </TextBlock>
-            <TextBlock Text="By awa_Eric233" Foreground="{DynamicResource ColorBrush3}" Margin="0,5,0,0"/>
+            <TextBlock Text="By awa_Eric233." Foreground="{DynamicResource ColorBrush3}" Margin="0,5,0,0"/>
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
                 <local:MyIconTextButton Height="35"
                     ColorType="Highlight" Text="投稿" ToolTip="芝士站需要你的帮助！&#xA;来为本主页贡献你找到的冷知识吧！" EventType="打开网页" EventData="https://forms.cloud.microsoft/r/5EmGAgSYHe" LogoScale="1" Logo="M1014.543678 9.459202a32.239736 32.239736 0 0 0-34.383718-7.30394L20.66383 371.592232a32.295735 32.295735 0 0 0-20.367832 25.783788 32.303735 32.303735 0 0 0 12.799895 30.255752L348.557141 675.493739l247.813967 335.437248a32.327735 32.327735 0 0 0 30.247752 12.783895 32.255735 32.255735 0 0 0 25.791788-20.367833L1021.847618 43.84292a32.279735 32.279735 0 0 0-7.30394-34.383718zM98.639191 410.663911l762.833742-293.70959-493.019955 493.051955L98.639191 410.663911z m514.699778 514.699778L414.036604 655.589902l493.003955-493.035955-293.70159 762.809742z"/>
